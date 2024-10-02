@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>VRShooter(Work in Progress)</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li class="title">
+                    <h5>Gino Schaap</h5>
+                    <h5>Game Mechanic Developer</h5>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutMe.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="Project">
+        <h1>The Rift Guardian</h1>
+        <h2>VR Shooter</h2>
+        <div class="project-image">
+            <img src="IMG/TheRiftGuardianLogo.png" alt="Project Image">
+        </div>
+        <section class="content-section">
+            <div class="project-details">
+                <h1>Description</h1>
+                <p>This was my and my teams first project using Unreal Engine and its Blueprints and our project was to make a Enemy Wave System VR Shooter</p>
+                <p>The time we had for this project was 8 weeks.</p>
+                <h2>Game Trailer</h2>
+                <video src="vid/TheRiftGuardianTrailer.mp4" controls></video>
+                <div class="project-info">
+                    <div class="VRShooter-text">
+                        <h2>A VR Shooter</h2>
+                        <p>We were giving a concept image of what was mostly needed and how it would look on paper. 3 areas where enemies would spawn and walk towards you, a "base" behind you that you would need to protect and a shop where you can buy a healing itmen and a gun. </p>
+                    </div>
+                </div>
+                <h3>Team</h3>
+                <p>We had quite a large team consisting of 13 people which all were Game Developers.</p>
+                <h2>My contribution to Module 1</h3>
+                <p>The role i took up on this project was to make the Health System. From making you be able to heal and die to seeing your health on a moving body part. I also worked on creating a Sublevel as its called that loads onto the map once you died.
+                    I was also one of two Lead Developers for this project so I also had to make sure everything was put together once it was finished so it could get tested by everyone.
+                </p>
+                <h1>Health System</h1>
+                <p>The base of each game that has a player and an enemy. The Health System works in 3 ways. Being able to take damage, heal yourself after taking damage and seeing your health on your left hand</p>
+                <section>
+                    <h2>Taking Damage</h2>
+                <img src="gifs/HPSystemShowcase.gif" alt=""></a>
+                <img src="IMG/Damage1.png" alt="">
+                <img src="IMG/Damage2.png" alt="">
+                <p>It looks complicated which it probably is. You need a Damage value which the enemy will have that will be sent to this function to subtract it from your current hp to tell you you're slowly dying.</p>
+                <h2>Healing Health</h2>
+                <p>The code says that you need a Health Amount that will be added onto your Current Hp which cannot go higher than your max hp and will then be set.</p>
+                <img src="gifs/HPShowcase2.gif" alt="">
+                <img src="IMG/Healing.png" alt="">
+                <h2>Health Display</h2>
+                <img src="IMG/ShowReel.png" alt="">
+                <p>This is what makes you be able to see your hp on your left hand. You need a Text renderer component where the text will obviously be displayed on.</p>
+                <a href="https://github.com/TheGingino/agp_InleverRepo/wiki/Health-System">Check the Wiki</a>
+                </section>
+                <section>
+                    <h1>My contribution to Module 2</h1>
+                    <p>I didnt have a specific role for the continuation of this project. 
+                    A new Lead was chosen and we all went back to work. 
+                    We brainstormed on new features for the game and then split us all up in teams to go work on that set feature.
+                    </p>
+                    <h3>Team</h3>
+                    <p>This time around we lost a member but also gained 8 more to the total of 20. 
+                        So we introduced them to the project and let them playtest so they understand what our vision was.</p>
+                    <h2>The Ranged Enemy</h2>
+                    <h3>The Enemy's Attack</h3>
+                    <img src="gifs/RangedShooting.gif" alt="">
+                    <p>This Enemy shoots bullets towards the player every couple of seconds and does it using an AI controller and Behavior Tree.</p>
+                    <img src="gifs/RangedBT.gif" alt="">
+                    <p>This is the magic is done for his ability to move and shoot. 
+                        This is called a Behavior Tree that uses a blackboard with keys to identify certain objects or the player to shoot at or move to. 
+                        When the enemy spawns in to the world the BT goes on and runs through his Tasks.
+                    </p>
+
+                    <h2>The Upgraded Wave System</h2>
+                    <p>Since there were multiple new enemies added to the game, 
+                        we thought it was also a good idea to rework and upgrade our already existing Wave System. 
+                        So I volunteered to look into it and change it up to spawn all our new enemies with their AI's so they function properly.
+                    </p>
+                    <h3>Wave System Blueprint</h3>
+                    <p>All footage for this has sadly been lost in time but I can tell you what I did.
+                        I made en Enum for all 3 Enemy AI and a Struct to put the data of the different enemies into it.
+                         In the blueprint I assigned both as a Input and Output to the Funtions so that you can add both to the spawn funtions to keep them assigned correctly.
+                    </p>
+                    <img src="gifs/WaveSystem.gif" alt="">
+                    <p>This is the final product of changes that were made to the Wave System.
+                        All Enemies are able to spawn with their AI Controller equivalent without missmatching to others.
+                    </p>
+                
+                </section>
+                <h3>Planning</h3>
+                <p>We used a website called Codecks to keep track of everything that had to be done or was already done. 
+                    Every card where you thought it was done needed to be put on review. 
+                    Once someone has reviewed your work on the Definition of Done and approves it, 
+                    they'll close the review and put the card on done. 
+                    If the review had feedback then you would need to process the feedback into your work and go
+                     through the Definition of Done process again.</p>
+                <p>It was one of the coolest games I have worked on so far and I am happy with the results. First time working with Virtual Reality and Unreal's Blueprints and it was worth the challenge.
+                    The project has been finished indefinitely. 
+                    I unfortunately no longer have access to it because Devil’s Luck is no longer operational within XR Lab’s office space.
+                </p>
+                <p>The repository to my contribution</p>
+                <a href="">Corrupted</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

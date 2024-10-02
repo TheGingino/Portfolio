@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Pokemon</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li class="title">
+                    <h5>Gino Schaap</h5>
+                    <h5>Game Mechanic Developer</h5>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutMe.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="Project">
+        <h1>Vertical Slice</h1>
+        <h2>Pokemon Sword and Shield</h2>
+        <div class="project-image">
+            <img src="IMG/VerticalSliceLogo.png" alt="Project Image">
+        </div>
+        <section class="content-section">
+            <div class="project-details">
+                <h1>Description</h1>
+                <p>The main goal was to recreate a fragment of Pokemon Sword and Shield in the next 8 weeks</p>
+                <div class="project-info">
+                    <div class="VerticalSlice-text">
+                        <h2>What is Vertical Slice?</h2>
+                        <p>The idea of this whole project is quite simple. Receate a this part of the actual game in your 8 week time period and try to make it 1 to 1</p>
+                    </div>
+                </div>
+                <h2>Example Gameplay video</h2>
+                <video src="vid/POKEMONSWORDSHIELD.mp4" controls></video>
+                ifr
+                <p>This is the video we were given to try and remake.
+                    We were given some creativity and were allowed to change the Pokemon that were used. As long as they were in the actual game and the wild pokemon we fought was from that area.
+                </p>
+                <h3>Team</h3>
+                <p>The team consisted of 4 Developers and 4 Artists.</p>
+                <h3>My contribution</h3>
+                <p>I was de Lead Developer for this project so my main focus besides programming features was making sure everything was being pulled to the right branch and if there were no errors.
+                    I majorly focussed on making giving and taking Damage as accurate as I could from the source..
+                </p>
+                <h2>Taking Damage</h2>
+                <img class="Sheets" src="IMG/VerticalSliceSheet.png" alt="Minigame 3 gameplay">
+                <p>This is a Visual Sheet that tells you what that part of the script will do. This function will do a certain amount of damage based on the Players and Enemies stats. Below you can see the result in game.</p>
+                <img src="gifs/PlayerDamage.gif" alt="Player Damage">
+                <img src="gifs/EnemyDamage.gif" alt="Enemy Damage">
+                <h2>Power Points(PP) subtraction on UI after clicking</h2>
+                <img src="gifs/PPDepletion.gif" alt="Power Point Depletion">
+                <p>As seen above you can tell that when that button is press the count of 5 will go down. when says 0 the whole button will be deactivated. Below you'll see the Script that makes it happen.</p>
+                <img src="IMG/PPSystem.png" alt="PP Scripts">
+                <h3>Project Duration</h3>
+                <p>The time given for this project was 8 weeks</p>
+                <h3>Planning</h3>
+                <p>We used a Trello board that you can find under this to make cards for each feature of the game that needed to be done.</p>
+                <a href="https://trello.com/b/dIKKndQ3/pokemon"></a>
+                <p>It was fun working on this because I love the franchise below is where you can find the project</p>
+                <p>You can download the Demo on our github page.</p>
+                <a href="https://github.com/merlijn1411/VerticalSlice/releases/tag/1.2">Github</a>
+                <p>The repositories to my contribution</p>
+                <a href="https://github.com/merlijn1411/VerticalSlice/blob/develop/VerticalSlice/Assets/Scripts/Managers/TurnBaseManager.cs">TurnBased system and Damage</a>
+                <a href="https://github.com/merlijn1411/VerticalSlice/blob/develop/VerticalSlice/Assets/Scripts/UI/PPSystem.cs">PP System</a>
+                <a href="https://github.com/merlijn1411/VerticalSlice/blob/develop/VerticalSlice/Assets/Scripts/Managers/GameManager.cs">Game Manager</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

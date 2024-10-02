@@ -1,0 +1,515 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #873697 ;
+}
+
+h1{
+    margin: 10px;
+}
+a{
+    font-size: larger;
+    text-decoration:none;
+    color: black;
+    font-weight: bold;
+}
+header {
+    background-color: #b32525;
+    color: white;
+    width: 100%;
+    padding: 10px 0; /* Padding for breathing space */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+nav {
+    width: 100%;
+    max-width: 1200px; /* Max width for larger screens */
+    padding: 0 20px; /* Some padding around the content */
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Even space between the items */
+    list-style: none; /* No bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center; /* Center the text */
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+nav ul li.title {
+    flex: 2; /* Title gets a bit more space */
+    text-align: left; /* Align the title to the left */
+}
+
+nav ul li.title h5 {
+    margin: 0;
+    font-size: 20px;
+}
+
+
+nav > ul > li.title {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+
+nav ul li.active{
+    height: max-content;
+    background-color: #4d1212;
+}
+
+nav ul li a:hover {
+    color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        font-size: 14px;
+    }
+    
+    nav ul li.title h5 {
+        font-size: 16px; /* Smaller title */
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 8px 10px; /* Less padding on smaller screens */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 500px) {
+    header {
+        padding: 5px 0; /* Less padding on small screens */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Stack the items vertically */
+    }
+
+    nav ul li {
+        flex: none;
+        width: 100%; /* Each item takes full width */
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    nav ul li.title h5 {
+        font-size: 14px;
+    }
+}
+
+
+article{
+    width: 60vh;
+    height: 80vh;
+    padding: 40px;
+    flex-basis: 50%;
+    background-color: #f8cccc;
+    border-radius: 10%;
+    border: 5px solid black;
+}
+
+p{
+    margin-top: 10px;
+    color:  black;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+}
+
+.background-Image {
+    position: relative;
+    width: 100%;
+    height: var(--canvas-height, 350px);/
+}
+#backgroundCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px; 
+    z-index: -1;
+}
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.zoom-animation {
+    animation: zoomInOut 5s infinite ease-in-out;
+    font-size: 48px;
+    color: #ffffff; 
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.projects {
+    max-width: 70%; /* Full width for the projects section */
+    margin: 0 auto; /* Center the projects section */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.projectTitle{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 46px;
+    padding: 40px;
+}
+
+.project-block {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
+    justify-content: center; /* Keep items centered */
+    padding: 25px;
+    background-color: rgb(124, 11, 11);
+    border-radius: 25px;
+    border: 15px solid #131112;
+}
+
+.project-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Space items out */
+    list-style: none;
+    gap: 25px;
+    padding: 10px;
+}
+
+.project-item {
+    flex-basis: calc(33.33% - 30px); /* Set the width to a third of the container, accounting for the gap */
+    max-width: 350px; /* Optional: Limit the maximum width */
+    border-radius: 25px;
+    background-color: #3b0000;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    height: 250px; /* Fixed height for image consistency */
+    object-fit: fill; /* Ensure the image covers the space without distortion */
+    border-radius: 15px;
+    
+}
+
+.project-item p {
+    font-size: larger;
+    color: white;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.project-item .game-engine {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-top: 10px;
+}
+
+/* Responsive: On smaller screens, stack the items vertically */
+/* Responsive: Adjust layout for medium-sized screens */
+@media (max-width: 1000px) {
+    .project-item {
+        flex-basis: calc(50% - 20px); /* Adjust to fit two items per row */
+    }
+    .project-item img{
+        width: 80%;
+    }
+}
+
+/* Responsive: Adjust layout for smaller screens */
+@media (max-width: 600px) {
+    .project-item {
+        
+        flex-basis: 100%; /* Take full width on smaller screens */
+    }
+}
+
+.project-item > a :hover{
+    overflow-x: hidden;
+    animation: zoomInOut 2s;
+}
+
+/*About Me*/
+
+.Black{
+    background-color: black;
+}
+
+.AboutMe {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+article h3{
+    padding: 10px;
+    color: black;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px; /* Adds spacing between text and image */
+    max-width: 1200px; /* Max width to avoid stretching on large screens */
+    margin: 0 auto; /* Centers the content */
+    padding: 20px;
+    border-radius: 25px;
+    background-color: #696767; /* Dark gray background */
+}
+
+/* Text block next to image */
+.about-text {
+    flex: 1; /* Let the text take up remaining space */
+    padding: 10px;
+    font-size: 1.5rem; /* Scalable font-size */
+}
+
+.about article {
+    flex: 1;
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: left;
+    max-width: 600px;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.image-container a {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .about {
+        flex-direction: column; /* Stack the text and image vertically */
+        text-align: center;
+    }
+
+    .about article {
+        font-size: 1rem; /* Adjust text size for smaller screens */
+        max-width: 100%; /* Ensure full width on smaller screens */
+    }
+
+    .image-container {
+        max-width: 100%; /* Ensure full width on smaller screens */
+    }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 500px) {
+    .about article {
+        font-size: 0.9rem; /* Smaller font size for better fit */
+        padding: 5px;
+    }
+
+    .image-container img {
+        border-radius: 10px; /* Keep image corners rounded */
+    }
+
+    .image-container a {
+        font-size: 1rem; /* Adjust link font size */
+    }
+}
+
+
+/*Contact Page*/
+.contact-container {
+    max-width: 750px;
+    margin: 250px auto;
+    padding: 40px;
+    background-color: rgb(165, 0, 0);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.contact-container li {
+    font-size: 24px;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 75px;
+    height: 75px;
+    border-radius: 20%;
+    border: 1px solid #660c0c;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/*Project page below */
+
+.Project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align:center /* Center-align text */
+}
+
+.Project a{
+    display: grid;
+    font-size: 24px;
+    font-weight: bold;
+}
+.project-details {
+    max-width: 900px; /* Adjust as needed */
+}
+
+.project-details p {
+    margin: 15px;
+    color: black;
+}
+
+.project-details img{
+    max-width: 100%;
+}
+
+.project-image img {
+    border: 10px solid rgb(255, 0, 0);
+    margin-top: 10px;
+    margin-right: 0 auto;
+    max-width: 100%; /* Ensure images don't exceed their container's width */
+}
+
+h2{
+    margin-top: 25px;
+    font-weight: bold;
+}
+.code{
+    display: flexbox;
+    gap: 20px;
+    list-style: none;
+}
+
+.Sheets{
+    height: 600px;
+}
+
+video{
+    max-width: fit-content;
+    width: 100%;
+    max-height: fit-content;
+    height: 100%;
+}
+
+/*CV CSS*/
+
+.cv-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 10px solid black;
+    border-radius: 10%;
+    position: absolute;
+    left: 250px;
+}
+
+.CV-details li {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+.CV-education,
+.CV-courses,
+.CV-work-experience,
+.skills,
+.hobbies {
+    margin-bottom: 30px;
+}
+
+.skills-list,
+.hobbies-list {
+    list-style-type: none;
+}
+
+.skills-list li,
+.hobbies-list li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
